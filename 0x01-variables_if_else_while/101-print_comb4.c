@@ -8,15 +8,15 @@
 
 int main(void)
 {
-	int a ='0';
-	int b ='0';
-	int c ='0';
+	int a = '0';
+	int b = '0';
+	int c = '0';
 
-	while (a <='7')
+	while (a <= '7')
 	{
-	while (b <='8')
+	while (b <= '8')
 	{
-	while (c <='9')
+	while (c <= '9')
 	{
 		if (a < b && b < c)
 		{
