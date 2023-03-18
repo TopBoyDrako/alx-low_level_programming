@@ -8,9 +8,9 @@
 
 int main(void)
 {
-	int a ='0'
-	int b ='0'
-	int c ='0'
+	int a ='0';
+	int b ='0';
+	int c ='0';
 
 	while (a <='7')
 	{
@@ -18,7 +18,7 @@ int main(void)
 	{
 	while (c <='9')
 	{
-		if (i < j && j < k)
+		if (a < b && b < c)
 		{
 		putchar(a);
 		putchar(b);
