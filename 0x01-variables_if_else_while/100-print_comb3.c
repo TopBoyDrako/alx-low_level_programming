@@ -16,7 +16,7 @@ int a = '0';
 int b = '0';
 
 while (a <= '9')
-{ 
+{
 	while (b <= '9')
 	{
 		if (!(a > b) || a == b)
@@ -27,10 +27,10 @@ while (a <= '9')
 			{
 				putchar('\n');
 			}
-			else 
+			else
 			{
 				putchar(',');
-				putchar(' ' );
+				putchar(' ');
 			}
 		}
 		b++;
