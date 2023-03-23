@@ -14,13 +14,13 @@
 	for (n = 0; n < 50; n++)
 	{
 		sum = fib1 + fib2;
-		printf("%lu", sum)
+		printf("%lu", sum);
 
 			fib1 = fib2;
 			fib2 = sum;
 
 			if (n == 49)
-				printf('\n');
+				printf("\n");
 			else
 			printf(", ");
 
