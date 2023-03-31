@@ -6,7 +6,7 @@
  * @s2: second string pointer
  *
  * Return: a value equal to, less than or greater than 0
- * depending on the outcome of the string
+ * depending 
  */
 
 int _strcmp(char *s1, char *s2)
