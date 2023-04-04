@@ -18,6 +18,6 @@ do  {
         dest[i] = src[i];
 	i++;
 } while (i < n);
- 
+
 	return (dest);
 }
