@@ -20,16 +20,18 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	p = n = 0;
-	if (s1[p] != '\0')
+	p = 0;
+	n = 0;
+	while (s1[p] != '\0')
 		p++;
-	if (s2[n] != '\0')
+	while (s2[n] != '\0')
 		n++;
 	concatenate = malloc(sizeof(char) * (p + n + 1));
 
 	if (concatenate == NULL)
 		return (NULL);
-	p = n = 0;
+	p = 0;
+	n = 0;
 
 	while (s1[p] != '\0')
 	{
