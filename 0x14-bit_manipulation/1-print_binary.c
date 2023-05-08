@@ -10,10 +10,6 @@ void print_binary(unsigned long int n)
 	int p, num = 0;
 	unsigned long int x;
 
-	if (!num)
-
-	_putchar('0');
-
 	for (p = 50; p >= 0; p--)
 	{
 		x = n >> p;
@@ -26,6 +22,7 @@ void print_binary(unsigned long int n)
 		else if (num)
 			_putchar('0');
 	}
-
+	 if (!num)
+		_putchar('0');
 }
 
