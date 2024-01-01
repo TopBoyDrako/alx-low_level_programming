@@ -14,7 +14,7 @@ def island_perimeter(grid):
             if m == 1:
                 if i == 0 or grid[i - 1][n] != 1:
                     land += 1
-                if n ==  0 or grid[i][n - 1] != 1:
+                if n == 0 or grid[i][n - 1] != 1:
                     land += 1
                 if n == width or grid[i][n + 1] != 1:
                     land += 1
