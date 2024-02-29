@@ -36,20 +36,3 @@ int interpolation_search(int *array, size_t size, int value) {
 
     return -1;
 }
-
-int main(void) {
-    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-    size_t size = sizeof(array) / sizeof(array[0]);
-    int value = 3;
-    int index;
-
-    printf("Searching for %d in the array\n", value);
-    index = interpolation_search(array, size, value);
-    if (index != -1) {
-        printf("Found %d at index: %d\n", value, index);
-    } else {
-        printf("%d not found in the array\n", value);
-    }
-
-    return 0;
-}
