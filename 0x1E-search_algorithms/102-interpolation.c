@@ -10,47 +10,46 @@
  * Return: index of the number
  */
 
-int interpolation_search(int *array, size_t size, int value);
-
-int main() {
-    int array[] = {10, 20, 30, 40, 50, 60, 70, 80, 90, 100};
-    size_t size = sizeof(array) / sizeof(array[0]);
-    int value = 50;
-    
-    int index = interpolation_search(array, size, value);
-    
-    if (index != -1) {
-        printf("Value %d found at index %d\n", value, index);
-    } else {
-        printf("Value %d not found in the array\n", value);
-    }
-    
-    return 0;
-}
-
-/* Interpolation search algorithm */
 int interpolation_search(int *array, size_t size, int value) {
+    size_t low, high, pos;
+
     if (array == NULL || size == 0) {
-        return -1; /* Array is empty or NULL */
+        return -1;
     }
-    
-    size_t low = 0;
-    size_t high = size - 1;
-    
+
+    low = 0;
+    high = size - 1;
+
     while (low <= high && value >= array[low] && value <= array[high]) {
-        /* Calculate the probe position using interpolation formula */
-        size_t pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
-        
+        pos = low + (((double)(high - low) / (array[high] - array[low])) * (value - array[low]));
+
         printf("Comparing value %d with array[%lu] = %d\n", value, (unsigned long)pos, array[pos]);
-        
+
         if (array[pos] == value) {
-            return pos; /* Found the value at position pos */
+            return pos;
         } else if (array[pos] < value) {
-            low = pos + 1; /* Adjust the lower bound */
+            low = pos + 1;
         } else {
-            high = pos - 1; /* Adjust the upper bound */
+            high = pos - 1;
         }
     }
-    
-    return -1; /* Value not found in the array */
+
+    return -1;
+}
+
+int main(void) {
+    int array[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    size_t size = sizeof(array) / sizeof(array[0]);
+    int value = 3;
+    int index;
+
+    printf("Searching for %d in the array\n", value);
+    index = interpolation_search(array, size, value);
+    if (index != -1) {
+        printf("Found %d at index: %d\n", value, index);
+    } else {
+        printf("%d not found in the array\n", value);
+    }
+
+    return 0;
 }
